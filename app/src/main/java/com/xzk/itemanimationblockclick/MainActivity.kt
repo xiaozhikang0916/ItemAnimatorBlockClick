@@ -6,6 +6,7 @@ import android.view.View
 import com.xzk.itemanimationblockclick.ui.main.BaseFragment
 import com.xzk.itemanimationblockclick.ui.main.ClickAnimatorFragment
 import com.xzk.itemanimationblockclick.ui.main.DefaultAnimatorFragment
+import com.xzk.itemanimationblockclick.ui.main.TagAnimatorFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,6 +20,10 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<View>(R.id.click_fragment).setOnClickListener {
             setFragment(ClickAnimatorFragment())
+        }
+
+        findViewById<View>(R.id.tag_fragment).setOnClickListener {
+            setFragment(TagAnimatorFragment())
         }
     }
 

@@ -11,10 +11,10 @@
         android:id="@+id/container"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/barrier"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/barrier"
         tools:context=".MainActivity" />
 
     <androidx.constraintlayout.widget.Barrier
@@ -22,15 +22,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="top"
-        app:constraint_referenced_ids="click_fragment,default_fragment"
-        />
+        app:constraint_referenced_ids="click_fragment,default_fragment" />
 
     <Button
         android:id="@+id/default_fragment"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Default Fragment"
         android:gravity="center"
+        android:text="Default"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -40,10 +39,19 @@
         android:id="@+id/click_fragment"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:text="Click"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:text="Click Fragment"
-        android:gravity="center"
         app:layout_constraintLeft_toRightOf="@id/default_fragment"
+        app:layout_constraintRight_toLeftOf="@id/tag_fragment" />
+
+    <Button
+        android:id="@+id/tag_fragment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Tag"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/click_fragment"
         app:layout_constraintRight_toRightOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

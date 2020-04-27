@@ -18,7 +18,7 @@ class DefaultAnimatorFragment : BaseFragment<ItemViewHolder>() {
     }
 }
 
-class DefaultAdapter(fragment: DefaultAnimatorFragment) : BaseAdapter<ItemViewHolder>(fragment) {
+class DefaultAdapter(fragment: BaseFragment<ItemViewHolder>) : BaseAdapter<ItemViewHolder>(fragment) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         return ItemViewHolder(
             LayoutInflater.from(parent.context).inflate(
